@@ -1,0 +1,27 @@
+An **activation function** is a mathematical function used in **artificial neural networks** to determine whether a neuron should be activated or not — in other words, whether the neuron’s output should be passed to the next layer in the network.
+
+### Why it's important:
+
+* It introduces **non-linearity** into the network, allowing it to learn complex patterns.
+* Without an activation function, the network would behave like a **linear regression model**, no matter how many layers it had.
+
+---
+
+### Common Activation Functions:
+
+| Activation Function              | Formula / Description                          | Pros                                        | Cons                                  |
+| -------------------------------- | ---------------------------------------------- | ------------------------------------------- | ------------------------------------- |
+| **Sigmoid**                      | $\sigma(x) = \frac{1}{1 + e^{-x}}$             | Smooth, bounded (0,1)                       | Can cause vanishing gradients         |
+| **Tanh**                         | $\tanh(x) = \frac{e^x - e^{-x}}{e^x + e^{-x}}$ | Centered around 0                           | Still prone to vanishing gradients    |
+| **ReLU** (Rectified Linear Unit) | $f(x) = \max(0, x)$                            | Fast, avoids vanishing gradient for $x > 0$ | Can "die" (zero gradient for $x < 0$) |
+| **Leaky ReLU**                   | $f(x) = x$ if $x > 0$; $ax$ otherwise          | Fixes dying ReLU problem                    | Requires tuning parameter $a$         |
+| **Softmax**                      | Converts logits to probabilities               | Good for multi-class classification         | Not used in hidden layers             |
+
+---
+
+### Where it's used:
+
+* In **hidden layers**, to learn patterns and representations.
+* In **output layers**, to produce the final prediction (e.g., sigmoid for binary classification, softmax for multi-class).
+
+Would you like an example using a simple neural network?
