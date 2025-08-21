@@ -1,3 +1,5 @@
+// Time complexity : O(n)
+
 // #include<bits/stdc++.h>
 // #include<iostream.h>
 #include<iostream>
